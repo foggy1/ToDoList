@@ -1,0 +1,13 @@
+<section id="createUser">
+<%= erb :'_errors', locals: { errors: @errors } %>
+
+<form id="newUser" action="/users" method="post">
+  <label for="user[username]">Username:</label>
+  <input type="text" name="user[username]">
+  <label for="user[email]">Email:</label>
+  <input type="text" name="user[email]">
+  <label for="user[password]">Password:</label>
+  <input type="password" name="user[password]">
+  <input id="button" type="submit" value="Register">
+</form>
+</section>

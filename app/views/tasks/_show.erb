@@ -1,0 +1,16 @@
+<div id="<%= task.id %>" class="taskDisplay">
+  <input class="checkbox" type="checkbox" name="<%= task.id %>"
+  <% if task.complete? %>
+    checked disabled
+  <% end %>
+  <% if !owner?(task) %>
+    disabled
+  <% end %>
+  >
+  <label for="<%= task.id %>"><%= task.description %></label>
+  <% if !task.complete? && owner?(task)%>
+    <%= erb :'tasks/_edit_link', locals: {task: task, list: list} %>
+  <% elsif owner?(task) %>
+    <%= erb :'tasks/_delete_link', locals: {task: task, list: list} %>
+  <% end %>
+</div>

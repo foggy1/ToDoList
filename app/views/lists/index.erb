@@ -1,0 +1,9 @@
+<% if logged_in? %>
+
+<% end %>
+
+<section id="listDisplay">
+  <% @lists.each do |list| %>
+    <%= erb :'lists/_show_one', locals: {list: list} %>
+  <% end %>
+</section>

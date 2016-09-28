@@ -12,12 +12,27 @@
   -->
   <link rel="stylesheet" href="/css/application.css">
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/jquery-3.1.1.min.js"></script>
   <script src="/js/application.js"></script>
 
   <title></title>
 </head>
 <body>
+<header id="header"><h1>Todo List</h1></header>
+<div class="container">
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <% if !logged_in? %>
+        <li><a href="/login/new">Log in</a>
+        <li><a href="/users/new">Register</a></li>
+      <% else %>
+        <li><a href="/logout">Log out</a>
+        <li><a href="/users/<%=current_user.id%>"><%=current_user.username%></a></li>
+      <% end %>
+    </ul>
+  </nav>
   <%= yield %>
+</div>
 </body>
 </html>
