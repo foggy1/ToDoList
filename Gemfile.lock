@@ -53,6 +53,7 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rack-timeout (0.3.2)
     rake (11.3.0)
     rspec (3.5.0)
       rspec-core (~> 3.5.0)
@@ -104,12 +105,16 @@ DEPENDENCIES
   pg
   pry
   rack-test
+  rack-timeout (= 0.3.2)
   rake
   rspec (~> 3.0)
   shotgun
   shoulda-matchers
   sinatra
   sinatra-contrib
+
+RUBY VERSION
+   ruby 2.2.4p230
 
 BUNDLED WITH
    1.13.1

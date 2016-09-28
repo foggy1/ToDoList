@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.2.4'
+gem 'rack-timeout', '0.3.2'
 
 # PostgreSQL driver
 gem 'pg'
